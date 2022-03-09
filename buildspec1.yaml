@@ -11,4 +11,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3 sync . s3://demo-syncs3/ --delete
+      - aws s3 sync . s3://demo-syncs3 --delete
