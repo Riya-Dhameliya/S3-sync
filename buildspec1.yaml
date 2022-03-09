@@ -1,0 +1,16 @@
+version: 0.2
+
+
+phases:
+  pre_build:
+    commands:
+      - echo In Pre-build stage
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - aws s3 sync . s3://demo-sync-s3
+
+
